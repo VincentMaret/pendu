@@ -1,0 +1,116 @@
+<section id="Game">
+  <h1>JEU DU PENDU</h1>
+  <h2 class="notif">déjà vu</h2>
+  <div class="contents">
+    <div>
+      <div class="word-container"></div>
+      <div class="lives"></div>
+      <div class="letters-container"></div>
+    </div>
+  </div>
+
+
+  <style>
+    @import 'config.css';
+
+    #Game {
+      background: var(--black);
+      color: var(--white);
+      box-shadow: 25px 25px 7px var(--blackAlpha);
+      padding: 15px;
+    }
+
+    #Game * {
+      font-family: 'Hind Siliguri', sans-serif;
+    }
+
+    h1 {
+      text-align: center;
+      padding-top: 3rem;
+      margin: 0;
+      font-size: 30px;
+
+    }
+
+    .notif {
+      text-align: center;
+      color: rgb(24, 204, 84);
+      opacity: 0;
+    }
+
+    .contents {
+      height: 60vh;
+      width: 80vw;
+      max-width: 900px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      color: white;
+      align-items: center;
+      text-align: center;
+    }
+
+    .word-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .word-container>div {
+      margin-top: 10px;
+    }
+
+    .letter {
+      font-size: 30px;
+      width: 30px;
+      display: inline-block;
+      text-align: center;
+      background: none;
+      border: none;
+      border-bottom: 3px solid white;
+      margin: 0 10px;
+      color: white;
+      text-transform: uppercase;
+    }
+
+    .lives {
+      display: flex;
+      justify-content: center;
+      margin-top: 5vh;
+    }
+
+    .lives>div {
+      font-size: 40px;
+    }
+
+    .letters-container {
+      display: flex;
+      flex-wrap: wrap;
+      font-size: 25px;
+      text-transform: uppercase;
+      margin-top: 5vh;
+    }
+
+    .letters-container>div {
+      border: var(--white) solid 2px;
+      margin: 10px 5px;
+      background: var(--white);
+      width: 30px;
+      border-radius: 10%;
+      color: var(--black);
+    }
+
+    @media screen and (max-width: 600px) {
+      #Game {
+        padding: 0;
+        height: 100vh;
+        width: 100vw;
+      }
+
+      .contents {
+        margin: auto;
+        height: calc(100vh - 96px);
+      }
+    }
+  </style>
+</section>
